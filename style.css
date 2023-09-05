@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Pseudo-classe CSS :root --> representa o elemento <html> e é identico ao selector html*/
+:root {
+  --text-color: white; /* Acabamos de criar uma variável global que vai substituir o valor da propriedade "color" do css sempre que a gente precisar definir a cor de algum texto como sendo branco */
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5); /*O 4º numero indica o nível ou índice de  transparência da cor definida pelos 3 primeiros números, que vai de 0 à 1*/
+  --surface-color:rgba(255, 255, 255, 0.05); /* cor de fundo dos links/butões*/
+  --surface-color-hover:rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2); /* cor de fundo dos social-links*/
+  --switch-bg-url: url(./assets/moon-stars.svg); /* Background-image do butão switch (o butão que está logo após a imagem e o nome da pessoa) */ 
+}
+
+.Light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color:rgba(0, 0, 0, 0.05);
+  --surface-color-hover:rgba(0, 0, 0, 0.2);
+  --highlight-color:rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* CTRL + K + C --> TO COMMENT SEVERAL LINES
+  body{
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    Tudo isto pode ser escrito em uma só linha, o que chamamos de "shorthand ou atalho".
+    O seu equivalente é:
+    background: todas as propriedades supracitadas (image repeat position / size)
+
+    Que substituindo cada propriedade por seus respectivos valores teriamos o seguinte:
+  }
+  */
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+#container {
+  /* border: 1px solid red; usamos apenas para estruturar o local onde ficaria a imagem. Uma vez terminado, podemos remove-lo  */
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0px 24px;
+}
+
+/* Profile */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  margin-top: 8px;
+}
+
+/* Switch */
+#switch {
+  width: 64px;
+  position: relative;
+  margin: 4px auto;
+}
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center/cover;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.Light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* Links -> em forma de Lista*/
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /*espaço entre os itens */
+  padding: 24px 0px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color); 
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/* Pseudo-Selector*/
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+
+  transition: background 0.2s;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}
