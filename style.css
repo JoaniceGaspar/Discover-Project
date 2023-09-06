@@ -47,6 +47,7 @@ body * {
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 #container {
@@ -171,4 +172,15 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/* Media Queries --> Responsividade */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .Light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
