@@ -93,11 +93,17 @@ body {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-out 0.2s; 
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .Light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards; 
+  /*Por norma após a animação chegar ao fim, ela volta ao estado inicial. Caso a gente não queira assim, podemos usar o "Forwards" que faz com que ela permaneça no estado final*/
 }
 
 #switch span {
@@ -182,5 +188,24 @@ footer {
 
   .Light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* keyframes --> Animações no Css */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50px;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 0;
   }
 }
