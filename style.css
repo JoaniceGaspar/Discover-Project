@@ -51,7 +51,8 @@ body {
 
 #container {
   /* border: 1px solid red; usamos apenas para estruturar o local onde ficaria a imagem. Uma vez terminado, podemos remove-lo  */
-  width: 360px;
+  width: 100%;
+  max-width: 580px;
   margin: 56px auto 0px;
   padding: 0px 24px;
 }
