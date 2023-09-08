@@ -7,7 +7,7 @@
 /* Pseudo-classe CSS :root --> representa o elemento <html> e é identico ao selector html*/
 :root {
   --text-color: white; /* Acabamos de criar uma variável global que vai substituir o valor da propriedade "color" do css sempre que a gente precisar definir a cor de algum texto como sendo branco */
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile2.jpg);
   --stroke-color: rgba(
     255,
     255,
@@ -196,11 +196,11 @@ footer {
 /* Media Queries --> Responsividade */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
+    --bg-url: url(./assets/bg-desktop2.jpg);
   }
 
   .Light {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light2.jpg);
   }
 }
 
