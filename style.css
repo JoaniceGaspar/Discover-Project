@@ -21,10 +21,11 @@
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.05);
+  /* --surface-color: rgba(0, 0, 0, 0.05); */
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
+  --surface-color:rgba(207, 44, 156, 0.2); 
 }
 
 body * {
@@ -56,12 +57,11 @@ body {
   /* border: 1px solid red; usamos apenas para estruturar o local onde ficaria a imagem. Uma vez terminado, podemos remove-lo  */
   width: 100%;
   max-width: 580px;
-  margin: 30px auto 0px;
+  margin: 15px auto 0px;
   padding: 0px 24px;
 }
 
 /* Profile */
-
 #profile {
   text-align: center;
   padding: 15px;
@@ -244,7 +244,7 @@ ul {
 }
 
 footer {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   font-size: 14px;
 }
