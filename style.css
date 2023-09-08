@@ -8,20 +8,30 @@
 :root {
   --text-color: white; /* Acabamos de criar uma variável global que vai substituir o valor da propriedade "color" do css sempre que a gente precisar definir a cor de algum texto como sendo branco */
   --bg-url: url(./assets/bg-mobile.jpg);
-  --stroke-color: rgba(255, 255, 255, 0.5); /*O 4º numero indica o nível ou índice de  transparência da cor definida pelos 3 primeiros números, que vai de 0 à 1*/
-  --surface-color:rgba(255, 255, 255, 0.05); /* cor de fundo dos links/butões*/
-  --surface-color-hover:rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(255, 255, 255, 0.2); /* cor de fundo dos social-links*/
-  --switch-bg-url: url(./assets/moon-stars.svg); /* Background-image do butão switch (o butão que está logo após a imagem e o nome da pessoa) */ 
+  --stroke-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /*O 4º numero indica o nível ou índice de  transparência da cor definida pelos 3 primeiros números, que vai de 0 à 1*/
+  --surface-color: rgba(255, 255, 255, 0.05); /* cor de fundo dos links/butões*/
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* cor de fundo dos social-links*/
+  --switch-bg-url: url(./assets/moon-stars.svg); /* Background-image do butão switch (o butão que está logo após a imagem e o nome da pessoa) */
 }
 
 .Light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color:rgba(0, 0, 0, 0.05);
-  --surface-color-hover:rgba(0, 0, 0, 0.2);
-  --highlight-color:rgba(0, 0, 0, 0.1);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
 
@@ -81,7 +91,7 @@ body {
   position: relative;
   margin: 4px auto;
 }
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center/cover;
@@ -94,7 +104,7 @@ body {
   z-index: 1;
   transform: translateY(-50%);
 
-  animation: slide-out 0.2s; 
+  animation: slide-out 0.2s;
 }
 
 #switch button:hover {
@@ -102,7 +112,7 @@ body {
 }
 
 .Light #switch button {
-  animation: slide-in 0.4s forwards; 
+  animation: slide-in 0.4s forwards;
   /*Por norma após a animação chegar ao fim, ela volta ao estado inicial. Caso a gente não queira assim, podemos usar o "Forwards" que faz com que ela permaneça no estado final*/
 }
 
@@ -116,7 +126,6 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
-
 
 /* Links -> em forma de Lista*/
 ul {
@@ -135,8 +144,8 @@ ul li a {
   padding: 16px 24px;
 
   background: var(--surface-color);
-  border: 1px solid var(--stroke-color); 
-  border-radius: 8px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 25px;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -151,6 +160,10 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
+}
+
+#link_to_nlw {
+  text-align: center;
 }
 
 #social-links {
