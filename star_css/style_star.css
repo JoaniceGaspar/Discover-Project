@@ -1,0 +1,60 @@
+
+/* Primeira parte do código */
+#star {
+ margin: 100px; 
+ border-bottom: 70px solid purple;
+ border-right: 100px solid transparent;
+ border-left: 100px solid transparent ;
+
+ position: relative;
+ display:block;
+ width: 0px;
+ height: 0px;
+
+ transform: rotate(35deg);
+}
+
+/* Segunda parte do código */
+#star::before {
+  border-bottom: 80px solid purple;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+
+  content: "";
+
+  transform: rotate(-35deg);
+}
+
+/* Terceira parte do código */
+#star::after {
+  border-bottom: 70px solid purple;
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+
+  content: "";
+
+  transform: rotate(-70deg);
+}
+
+
+
+/*border: 15px 20px 30px
+  ["top: 15px"  "right and left 20px" "bottom 30px"] 
+*/
+
+/* border: 15px 10px 15px 10px solid purple; 
+   ["top: 15px"  "right: 10px" "bottom 15px" and "left 10px"]  */

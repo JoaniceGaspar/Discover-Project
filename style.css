@@ -14,7 +14,7 @@
     255,
     0.5
   ); /*O 4º numero indica o nível ou índice de  transparência da cor definida pelos 3 primeiros números, que vai de 0 à 1*/
-  --surface-color: rgba(255, 255, 255, 0.05); /* cor de fundo dos links/butões*/
+  --surface-color: rgba(255, 255, 255, 0.1); /* cor de fundo dos links/butões*/
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(
     255,
@@ -57,14 +57,14 @@ body * {
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  height: 130vh;
 }
 
 #container {
   /* border: 1px solid red; usamos apenas para estruturar o local onde ficaria a imagem. Uma vez terminado, podemos remove-lo  */
   width: 100%;
   max-width: 580px;
-  margin: 56px auto 0px;
+  margin: 30px auto 0px;
   padding: 0px 24px;
 }
 
@@ -125,6 +125,7 @@ body {
   border-radius: 9999px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  margin-bottom: 100px;
 }
 
 /* Links -> em forma de Lista*/
@@ -133,10 +134,78 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px; /*espaço entre os itens */
-  padding: 24px 0px;
+  /* padding: 24px 0px; */
 }
 
-ul li a {
+ ul li a {
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+ }
+ li a{
+  margin-top:30px;
+  margin-left: 200px;
+  position: absolute;
+  font-weight: 500;
+ }
+
+.star {
+  margin:auto;
+  display: block;
+  margin-bottom: 15%;
+
+  border-bottom: 70px solid var(--surface-color);
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+  position: relative;
+  width: 0px;
+  height: 0px;
+
+  transform: rotate(35deg);
+}
+
+.star::before {
+  border-bottom: 80px solid var(--surface-color);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);;
+
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+
+  content: "";
+
+  transform: rotate(-35deg);
+}
+
+.star::after {
+  border-bottom: 70px solid var(--surface-color);
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);;
+
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+
+  content: "";
+
+  transform: rotate(-70deg);
+}
+
+/* ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,13 +226,9 @@ ul li a {
 }
 
 /* Pseudo-Selector*/
-ul li a:hover {
+ ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
-}
-
-#link_to_nlw {
-  text-align: center;
 }
 
 #social-links {
@@ -222,3 +287,31 @@ footer {
     left: 0;
   }
 }
+
+
+
+/* ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 25px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/* Pseudo-Selector*/
+/* ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}  */
