@@ -19,22 +19,26 @@
     0.2
   ); /* cor de fundo dos social-links*/
   --switch-bg-url: url(./assets/moon-stars.svg); /* Background-image do butão switch (o butão que está logo após a imagem e o nome da pessoa) */
-  --surface-color: #280229;
-  --suface-boxShadow-color: 0px 10px 20px 2px rgba(0,255,255,0.7);
-  /* --surface-color: rgba(110, 110, 34, 0.36); */
+  /* --surface-color: #280229; */
+  /* --suface-boxShadow-color: 0px 10px 20px 2px rgba(0,255,255,0.7); */
+  /* --suface-boxShadow-color: 0px 10px 20px 2px rgba(110,110,34,0.9); */
+
+  --surface-color: rgba(110, 110, 34, 0.36);
+  --suface-boxShadow-color: 0px 10px 20px 2px rgba(223, 136, 190, 0.7);
 }
 
 .Light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  /* --surface-color: rgba(0, 0, 0, 0.05); */
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
   --surface-color: rgba(207, 44, 156, 0.2);
-  --suface-boxShadow-color: 0px 10px 20px 2px rgba(0,255,255,0.7)
-  /* --suface-boxShadow-color: 0px 15px 25px 2px rgba(104,3,76) */
+  --suface-boxShadow-color: 0px 10px 20px 2px rgba(104, 3, 76);
+
+  /* --surface-color: rgba(0, 0, 0, 0.05); */
+  /* --suface-boxShadow-color: 0px 10px 20px 2px rgba(0,255,255,0.7) */
 }
 
 body * {
@@ -152,10 +156,8 @@ ul li a {
   z-index: 1;
 
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-
-  
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
 
   /* transition: background 0.5s; */
 }
@@ -163,11 +165,9 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 0px solid var(--text-color);
-  border-radius: 5px;
+  border-radius: 10px;
   outline: 1px solid var(--highlight-color);
   box-shadow: var(--suface-boxShadow-color);
-
- /* box-shadow: inset 0px 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); */
 }
 
 .star a {
@@ -175,9 +175,9 @@ ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -80px;
-  margin-top: 18px;
-  padding: 10px 2px;
+  margin-left: -75px;
+  margin-top: 5px;
+  padding: 13px 5px;
 }
 
 .star {
@@ -189,7 +189,7 @@ ul li a:hover {
   border-right: 100px solid transparent;
   border-left: 100px solid transparent;
 
-  box-shadow: inset 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   position: relative;
   width: 0px;
@@ -203,7 +203,7 @@ ul li a:hover {
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
 
-  box-shadow: inset 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   position: absolute;
   height: 0;
@@ -222,7 +222,7 @@ ul li a:hover {
   border-right: 100px solid transparent;
   border-left: 100px solid transparent;
 
-  box-shadow: inset 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   position: absolute;
   display: block;
@@ -235,9 +235,6 @@ ul li a:hover {
 
   transform: rotate(-70deg);
 }
-
-
-
 
 /* ul li a {
   display: flex;
