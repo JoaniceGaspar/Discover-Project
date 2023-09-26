@@ -170,14 +170,26 @@ ul li a:hover {
   box-shadow: var(--suface-boxShadow-color);
 }
 
+#link1 {
+  width: 140px;
+  margin-left: -70px;
+  margin-top: 8px;
+}
+
+#link2 {
+  width: 155px;
+  margin-left: -80px;
+  margin-top: 8px;
+}
+
 .star a {
   width: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -75px;
+  margin-left: -70px;
   margin-top: 5px;
-  padding: 13px 5px;
+  padding: 5px 5px 8px 5px;
 }
 
 .star {
