@@ -35,7 +35,7 @@
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
   --surface-color: rgba(207, 44, 156, 0.2);
-  --suface-boxShadow-color: 0px 10px 20px 5px rgba(209, 66, 158, 0.721);
+  --suface-boxShadow-color: 0px 10px 20px 2px rgba(104, 3, 76, 0.721);
 
   /* --surface-color: rgba(0, 0, 0, 0.05); */
   /* --suface-boxShadow-color: 0px 10px 20px 2px rgba(0,255,255,0.7) */
@@ -63,7 +63,7 @@ body * {
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  height: 130vh;
 }
 
 #container {
