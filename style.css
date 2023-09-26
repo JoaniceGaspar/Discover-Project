@@ -10,11 +10,16 @@
   --bg-url: url(./assets/bg-mobile2.jpg);
   /* --stroke-color: rgba( 255,255,255,0.5); */
   /*O 4º numero indica o nível ou índice de  transparência da cor definida pelos 3 primeiros números, que vai de 0 à 1*/
-   /* cor de fundo dos links/butões*/
+  /* cor de fundo dos links/butões*/
   --surface-color-hover: rgba(0, 0, 0, 0.02);
-  --highlight-color: rgba(255,255,255,0.2);/* cor de fundo dos social-links*/
+  --highlight-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* cor de fundo dos social-links*/
   --switch-bg-url: url(./assets/moon-stars.svg); /* Background-image do butão switch (o butão que está logo após a imagem e o nome da pessoa) */
-  --surface-color:rgba(110, 110, 34, 0.36);
+  --surface-color: rgba(110, 110, 34, 0.36);
 }
 
 .Light {
@@ -25,7 +30,7 @@
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
-  --surface-color:rgba(207, 44, 156, 0.2); 
+  --surface-color: rgba(207, 44, 156, 0.2);
 }
 
 body * {
@@ -128,20 +133,20 @@ ul {
   /* padding: 24px 0px; */
 }
 
- ul li a {
+ul li a {
   list-style: none;
   text-decoration: none;
   text-align: center;
- }
- li a{
-  margin-top:30px;
+}
+li a {
+  margin-top: 30px;
   margin-left: 200px;
   position: absolute;
   font-weight: 500;
- }
+}
 
 .star {
-  margin:auto;
+  margin: auto;
   display: block;
   margin-bottom: 15%;
 
@@ -149,8 +154,8 @@ ul {
   border-right: 100px solid transparent;
   border-left: 100px solid transparent;
 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   position: relative;
   width: 0px;
   height: 0px;
@@ -162,8 +167,8 @@ ul {
   border-bottom: 80px solid var(--surface-color);
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
-  
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);;
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   position: absolute;
   height: 0;
@@ -182,7 +187,7 @@ ul {
   border-right: 100px solid transparent;
   border-left: 100px solid transparent;
 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   position: absolute;
   display: block;
@@ -217,7 +222,7 @@ ul {
 }
 
 /* Pseudo-Selector*/
- ul li a:hover {
+ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
@@ -278,8 +283,6 @@ footer {
     left: 0;
   }
 }
-
-
 
 /* ul li a {
   display: flex;
